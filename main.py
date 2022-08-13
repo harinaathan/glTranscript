@@ -16,18 +16,18 @@ dfP = dfP[["Course","My Score","Batch Median Score","Batch Max Score"]]
 
 # In[3]:
 fig = go.Figure()
-fig.add_trace(go.Bar(x=dfP.Course,y=dfP["My Score"],name="My Score",hovertemplate="My Score<br>%{y}"))
-fig.add_trace(go.Scatter(x=dfP.Course,y=dfP["Batch Median Score"],fillcolor='rgba(99, 110, 250,1)',
+fig.add_trace(go.Bar(y=dfP.Course,x=dfP["My Score"],orientation='h',
+                     name="My Score",hovertemplate="My Score<br>%{y}"))
+
+fig.add_trace(go.Scatter(y=dfP.Course,x=dfP["Batch Median Score"],fillcolor='rgba(99, 110, 250,1)',
                          name="Batch Median Score",hovertemplate="Batch Median Score<br>%{y}"))
-fig.add_trace(go.Scatter(x=dfP.Course,y=dfP["Batch Max Score"],fillcolor='rgba(239, 85, 59,1)',
+fig.add_trace(go.Scatter(y=dfP.Course,x=dfP["Batch Max Score"],fillcolor='rgba(239, 85, 59,1)',
                          name="Batch Max Score",hovertemplate="Batch Max Score<br>%{y}"))
-fig.update_yaxes(title=dict(text="Score",standoff=0),
-                 type='log',tickformat='0%')
-fig.update_xaxes(title=dict(text="Modules",standoff=0))
-fig.update_layout(legend=dict(yanchor='bottom',y=1,orientation='h',xanchor='right',x=1))
+fig.update_xaxes(title=dict(text="Score",standoff=0),type='log',tickformat='0%')
+fig.update_yaxes(title=dict(text="Modules",standoff=0),autorange="reversed")
+fig.update_layout(legend=dict(yanchor='bottom',y=1,orientation='h',xanchor='right',x=1,font=dict(size=10)))
 fig.update_layout(title=dict(text='My learning curve through the course',
-                             yanchor='top',y=0.9,xanchor='left',x=0));
-#fig.update_layout(autosize=False,height=500,width=500);
+                             yanchor='top',y=0.93,xanchor='left',x=0))
 
 # In[4]:
 st.title('Check this out')
