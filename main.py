@@ -26,8 +26,8 @@ fig.update_yaxes(title=dict(text="Score",standoff=0),
 fig.update_xaxes(title=dict(text="Modules",standoff=0))
 fig.update_layout(legend=dict(yanchor='bottom',y=1,orientation='h',xanchor='right',x=1))
 fig.update_layout(title=dict(text='My learning curve through the course',
-                             yanchor='top',y=0.9,xanchor='left',x=0))
-fig.update_layout(autosize=False,height=500,width=500);
+                             yanchor='top',y=0.9,xanchor='left',x=0));
+#fig.update_layout(autosize=False,height=500,width=500);
 
 # In[4]:
 st.title('Check this out')
