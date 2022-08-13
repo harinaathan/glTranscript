@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import streamlit as st
 
 # In[2]:
-df = pd.read_excel("./scoreLog.xlsx")
+df = pd.read_excel(".\scoreLog.xlsx")
 dfP = df.copy()
 dfP["My Score"] = dfP["My Score"].div(dfP["Total Score"]).round(3)
 dfP["Batch Median Score"] = dfP["Batch Median Score"].div(dfP["Total Score"]).round(3)
