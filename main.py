@@ -31,9 +31,7 @@ fig.update_layout(title=dict(text='My learning curve through the course',
 fig.update_layout(autosize=False,height=600,width=800);
 
 # In[4]:
-st.set_page_config(layout="wide")
-
-st.markdown("""<style> .big-font { font-size:30px !important; } </style>""", unsafe_allow_html=True)
+st.markdown("""<style> .big-font { font-size:40px !important; } </style>""", unsafe_allow_html=True)
 st.markdown('<p class="big-font">Comparison of my scores against the batch</p>', unsafe_allow_html=True)
 
 st.text('Scores of Post Graduate Program in Artificial Intelligence and Machine Learning\n\
